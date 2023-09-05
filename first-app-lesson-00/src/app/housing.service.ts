@@ -20,6 +20,13 @@ export class HousingService {
     return await data.json() ?? {};
   }
 
+  getPhotoUrl(photo: string | undefined): string {
+    let baseUrl = 'https://angular.io/assets/images/tutorials/faa';
+    let url = `${baseUrl}/${photo}`;
+    console.log(url);
+    return url;
+  }
+
   submitApplication(firstName: string, lastName: string, email: string) {
     console.log(`Homes application received: firstName: ${firstName}, lastName: ${lastName}, email: ${email}.`);
   }

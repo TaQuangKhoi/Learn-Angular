@@ -14,7 +14,7 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
   ],
   template: `
       <article>
-          <img class="listing-photo" [src]="getPhotoUrl(housingLocation?.photo)"
+          <img class="listing-photo" [src]="housingService.getPhotoUrl(housingLocation?.photo)"
                alt="Exterior photo of {{housingLocation?.name}}"/>
           <section class="listing-description">
               <h2 class="listing-heading">{{housingLocation?.name}}</h2>
@@ -62,13 +62,6 @@ export class DetailsComponent {
     this.housingService.getHousingLocationById(housingLocationId).then(housingLocation => {
       this.housingLocation = housingLocation;
     });
-  }
-
-  getPhotoUrl(photo: string | undefined): string {
-    let baseUrl = 'https://angular.io/assets/images/tutorials/faa';
-    let url = `${baseUrl}${photo}`;
-    console.log(url);
-    return url;
   }
 
   submitApplication() {

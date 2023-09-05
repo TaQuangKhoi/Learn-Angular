@@ -15,7 +15,6 @@ import {HousingLocation} from "../housinglocation";
     <section>
       <form>
         <input type="text" placeholder="Filter by city" #filter>
-        <span class="clear-input">&times;</span>
         <button class="primary" type="button" (click)="filterResults(filter.value)">Search</button>
       </form>
     </section>
