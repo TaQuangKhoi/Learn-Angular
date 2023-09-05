@@ -24,10 +24,17 @@ button {
   border-radius: 8px;
 }
 
+.clear-input {
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
 @media (min-width: 500px) and (max-width: 768px) {
   .results {
     grid-template-columns: repeat(2, 1fr);
   }
+
   input[type="text"] {
     width: 70%;
   }
